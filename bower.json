@@ -1,0 +1,25 @@
+{
+  "name": "angular-d3-cluster",
+  "version": "1.0.0",
+  "homepage": "https://github.com/leftstick/angular-d3-cluster",
+  "description": "A simnple cluster chart directive",
+  "keywords": [
+    "d3",
+    "cluster",
+    "angular"
+  ],
+  "authors": [
+    "Howard.Zuo"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.12"
+  }
+}

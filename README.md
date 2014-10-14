@@ -79,6 +79,12 @@ demo.controller('DemoController', function($scope) {
 | subjectFontSize | number | No | 12 | The font-size of subject text |
 | arounderFontSize | number | No | 8 | The font-size of arounder text |
 
+
+> Once the `data` or `option` is modified, the chart will be redrawn  
+> Once the `window` resized, the chart will be redrawn
+
+
+
 [d3-url]: http://d3js.org/
 [vwolfley-url]: https://github.com/vwolfley
 [d3.js.cluster-url]: https://github.com/vwolfley/d3.js.cluster

@@ -1,7 +1,7 @@
 'use strict';
 var demo = angular.module('demo', ['angular-d3-cluster']);
 
-demo.controller('DemoController', function($scope, $timeout) {
+demo.controller('DemoController', function($scope) {
     $scope.option = {
         subjectRange: [35, 45],
         arounderRange: [15, 25]

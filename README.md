@@ -9,10 +9,9 @@ Base on that, my team ask for a simple web component for displaying a cluster ch
 
 This component is inspired by [vwolfley][vwolfley-url]'s [d3.js.cluster][d3.js.cluster-url].
 
-
-
 ![](./docs/img/example.png)
 
+Online Demo: [angular-d3-cluster](http://leftstick.github.io/angular-d3-cluster/)
 
 ## Requirement ##
 

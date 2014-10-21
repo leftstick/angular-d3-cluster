@@ -1,6 +1,6 @@
 {
   "name": "angular-d3-cluster",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simnple cluster chart directive",
   "repository": {
     "type": "git",

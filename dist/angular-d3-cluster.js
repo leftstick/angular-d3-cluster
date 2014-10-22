@@ -270,9 +270,9 @@
     };
 
     if (typeof exports === 'object') {
-        definition(require('d3'));
+        module.exports = definition(require('d3'));
     } else if (typeof define === 'function' && define.amd) {
-        require(['d3'], definition);
+        define(['d3'], definition);
     } else {
         definition(global.d3);
     }

@@ -1,4 +1,4 @@
-# angular-d3-cluster  ![](http://img.shields.io/badge/bower_module-v1.1.1-green.svg) #
+# angular-d3-cluster  ![](http://img.shields.io/badge/bower_module-v1.1.2-green.svg) #
 ==================
 
 A simnple cluster chart directive

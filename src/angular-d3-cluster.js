@@ -79,18 +79,18 @@
                         arounderFontSize = getValue($scope.option, 'arounderFontSize');
 
                         for (i = 0; i < $scope.data.length; i++) {
-                            if (!minSubject || minSubject > $scope.data[i].value) {
-                                minSubject = $scope.data[i].value;
+                            if (!minSubject || minSubject > Math.abs($scope.data[i].value)) {
+                                minSubject = Math.abs($scope.data[i].value);
                             }
-                            if (!maxSubject || maxSubject < $scope.data[i].value) {
-                                maxSubject = $scope.data[i].value;
+                            if (!maxSubject || maxSubject < Math.abs($scope.data[i].value)) {
+                                maxSubject = Math.abs($scope.data[i].value);
                             }
                             for (j = 0; j < $scope.data[i].children.length; j++) {
-                                if (!minArounder || minArounder > $scope.data[i].children[j].value) {
-                                    minArounder = $scope.data[i].children[j].value;
+                                if (!minArounder || minArounder > Math.abs($scope.data[i].children[j].value)) {
+                                    minArounder = Math.abs($scope.data[i].children[j].value);
                                 }
-                                if (!maxArounder || maxArounder < $scope.data[i].children[j].value) {
-                                    maxArounder = $scope.data[i].children[j].value;
+                                if (!maxArounder || maxArounder < Math.abs($scope.data[i].children[j].value)) {
+                                    maxArounder = Math.abs($scope.data[i].children[j].value);
                                 }
                             }
                         }

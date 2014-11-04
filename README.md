@@ -1,4 +1,4 @@
-# angular-d3-cluster  ![](http://img.shields.io/badge/bower_module-v1.1.4-green.svg) #
+# angular-d3-cluster  ![](http://img.shields.io/badge/bower_module-v1.2.0-green.svg) #
 ==================
 
 A simnple cluster chart directive
@@ -77,6 +77,8 @@ demo.controller('DemoController', function($scope) {
 | maxRadius | number | No | 45 | The max size of a subject or arounder |
 | subjectFontSize | number | No | 12 | The font-size of subject text |
 | arounderFontSize | number | No | 8 | The font-size of arounder text |
+| onSubjectClick | function | No | No | The `subject` passed in the callback while clicking subject |
+| onArounderClick | function | No | No | The `arounder` passed in the callback while clicking arounder |
 
 
 > Once the `data` or `option` is modified, the chart will be redrawn  

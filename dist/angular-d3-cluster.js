@@ -107,7 +107,8 @@
                                 cluster: i,
                                 radius: subjectRadius(Math.abs($scope.data[i].value)),
                                 name: $scope.data[i].name,
-                                value: $scope.data[i].value
+                                value: $scope.data[i].value,
+                                subjectId: $scope.data[i].subjectId
                             };
                             clusters.push(cluster);
                             nodes.push(cluster);
@@ -116,7 +117,8 @@
                                     cluster: i,
                                     radius: arounderRadius(Math.abs($scope.data[i].children[j].value)),
                                     name: $scope.data[i].children[j].name,
-                                    value: $scope.data[i].children[j].value
+                                    value: $scope.data[i].children[j].value,
+                                    arounderId: $scope.data[i].children[j].arounderId
                                 };
                                 nodes.push(subNode);
                             }
@@ -154,6 +156,20 @@
                             })
                             .style('stroke', function(d) {
                                 return d.value >= 0 ? color.positive : color.negative;
+                            })
+                            .on('click', function(d) {
+                                if (d3.event.preventDefault) {
+                                    d3.event.preventDefault();
+                                }
+                                if (d3.event.stopPropagation) {
+                                    d3.event.stopPropagation();
+                                }
+                                if (clusters[d.cluster] === d && $scope.option && $scope.option.onSubjectClick) {
+                                    $scope.option.onSubjectClick(d);
+                                }
+                                if (clusters[d.cluster] !== d && $scope.option && $scope.option.onArounderClick) {
+                                    $scope.option.onArounderClick(d);
+                                }
                             });
 
                         g.append('text')
@@ -178,6 +194,20 @@
                             })
                             .style('display', function(d) {
                                 return (this.getComputedTextLength() > 2 * d.radius) ? 'none' : 'block';
+                            })
+                            .on('click', function(d) {
+                                if (d3.event.preventDefault) {
+                                    d3.event.preventDefault();
+                                }
+                                if (d3.event.stopPropagation) {
+                                    d3.event.stopPropagation();
+                                }
+                                if (clusters[d.cluster] === d && $scope.option && $scope.option.onSubjectClick) {
+                                    $scope.option.onSubjectClick(d);
+                                }
+                                if (clusters[d.cluster] !== d && $scope.option && $scope.option.onArounderClick) {
+                                    $scope.option.onArounderClick(d);
+                                }
                             });
                     };
 

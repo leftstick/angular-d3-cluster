@@ -3,6 +3,7 @@ var demo = angular.module('demo', ['angular-d3-cluster']);
 
 demo.controller('DemoController', function($scope) {
     $scope.option = {
+        positiveColor: '#fe6869',
         subjectRange: [35, 45],
         arounderRange: [15, 25]
     };

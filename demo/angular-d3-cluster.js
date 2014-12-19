@@ -2,7 +2,7 @@
  * angular-d3-cluster is a simple cluster chart directive.
  *
  * @author Howard.Zuo
- * @date   Oct 13th, 2014
+ * @date   Dec 19th, 2014
  *
  **/
 (function(angular, global) {
@@ -17,12 +17,12 @@
             arounderRange: [10, 25],
             maxRadius: 45,
             subjectFontSize: 12,
-            arounderFontSize: 8
+            arounderFontSize: 8,
+            positiveColor: '#FF0000',
+            negativeColor: '#00E700'
         };
 
         var color = {
-            positive: '#FF0000',
-            negative: '#00E700',
             white: '#fff'
         };
 
@@ -46,7 +46,7 @@
                     //options
                     var width, height, padding, clusterPadding,
                         maxRadius, subjectRange, arounderRange,
-                        subjectFontSize, arounderFontSize;
+                        subjectFontSize, arounderFontSize, positiveColor, negativeColor;
                     // The subjects.
                     var minSubject, maxSubject, minArounder, maxArounder;
                     //radius
@@ -77,6 +77,8 @@
                         arounderRange = getValue($scope.option, 'arounderRange');
                         subjectFontSize = getValue($scope.option, 'subjectFontSize');
                         arounderFontSize = getValue($scope.option, 'arounderFontSize');
+                        positiveColor = getValue($scope.option, 'positiveColor');
+                        negativeColor = getValue($scope.option, 'negativeColor');
 
                         for (i = 0; i < $scope.data.length; i++) {
                             if (!minSubject || minSubject > Math.abs($scope.data[i].value)) {
@@ -152,10 +154,10 @@
                                 if (clusters[d.cluster] === d) {
                                     return color.white;
                                 }
-                                return d.value >= 0 ? color.positive : color.negative;
+                                return d.value >= 0 ? positiveColor : negativeColor;
                             })
                             .style('stroke', function(d) {
-                                return d.value >= 0 ? color.positive : color.negative;
+                                return d.value >= 0 ? positiveColor : negativeColor;
                             })
                             .on('click', function(d) {
                                 if (d3.event.preventDefault) {
@@ -188,7 +190,7 @@
                             })
                             .style('fill', function(d) {
                                 if (clusters[d.cluster] === d) {
-                                    return d.value >= 0 ? color.positive : color.negative;
+                                    return d.value >= 0 ? positiveColor : negativeColor;
                                 }
                                 return color.white;
                             })

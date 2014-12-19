@@ -5,6 +5,7 @@ demo.controller('DemoController', function($scope) {
     $scope.option = {
         subjectRange: [35, 45],
         arounderRange: [15, 25],
+        positiveColor: '#fe6869',
         onSubjectClick: function(subject) {
             alert(subject.subjectId);
         },

@@ -1,6 +1,6 @@
 {
   "name": "angular-d3-cluster",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "homepage": "https://github.com/leftstick/angular-d3-cluster",
   "description": "A simnple cluster chart directive",
   "main": [
@@ -26,6 +26,6 @@
   ],
   "dependencies": {
     "d3": "~3.4.12",
-    "angular": "~1.3.0"
+    "angular": ">=1.3.0"
   }
 }
